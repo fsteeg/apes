@@ -6,7 +6,7 @@
 <title>A Prolog Expert System (APES)</title>
 </head>
 <body class="top">
-<h3>A Prolog Expert System (APES)</h3>
+<h1>A Prolog Expert System (APES)</h1>
 
 <hr size="1" />
 
@@ -21,9 +21,13 @@
 	value="i" /> <input type="hidden" name="as_sitesearch"
 	value="apes.sourceforge.net" /></div>
 </form>
-<a href="http://sourceforge.net/projects/apes">Download & More</a><br />
+<a href="http://sourceforge.net/projects/apes">Sourceforge Project
+Site<br />
+(Download and More)</a><br />
+<br />
 <a href="https://svn.sourceforge.net/svnroot/apes/com.quui.apes/">Browse
-Subversion</a> <br />
+the Subversion <br />
+repository</a> <br />
 <br />
 <a href="http://sourceforge.net/projects/jruby"><img
 	alt="SourceForge.net Logo"
@@ -66,54 +70,9 @@ also be built and maintained without requiring programming skills,
 making this a non-domain-specific expert system that could be used to
 built expert systems for any domain by experts in that particular
 domain, not by programmers.</p>
+
 <hr size="1" />
-<p><b>Running</b>
-<ul>
-	<li>install swi-prolog (should work on any ISO-Standard Prolog
-	Interpreter, but this is untested)</li>
-	<li>run "swipl -f main.pl", enter "start."</li>
-</ul>
-</p>
-<p><b>Queries</b> <br />
-<br />
-On questions, answer "yes."/"no."/"why." or "y."/"n."/"w."
-<ul>
-	<li>Consult the expert: "what is Object-A?"</li>
-	<li>Consult the expert using a specified property: "is Object-A a
-	bird?"</li>
-	<li>Query a fact, knowing the group: "is a dog a pet?"</li>
-	<li>Query a group: "show group pet."</li>
-</ul>
-</p>
-<p><b>Build up the knowledge base</b>
-<ul>
-	<li>Add a rule using facts to be asked or given (with "has"): "if
-	animal has backbone and animal has cold-blood then animal is a
-	reptile."</li>
-	<li>Add a rule using existing rules (with "is a"): "if animal is a
-	reptile and animal has enormous-size and animal has hollywood-fame then
-	animal is a godzilla."</li>
-	<li>Add a fact: "hamster is a pet." or "add hamster to pet."</li>
-	<li>Create a new group: "create group feline."</li>
-</ul>
-</p>
-<p>Rules are stored in "knowledge/knowledge.pl", facts in individual
-files for each group in "knowledge/groups".</p>
-<hr size="1" />
-<p><b>Plans & Todos</b>
-<ul>
-	<li>Make input more flexible</li>
-	<li>Improve cli feeling, reaction</li>
-	<li>Add online help to cli (display this file)</li>
-	<li>Info on startup, on the help available</li>
-	<li>Number rules added from the cli, for info on display of
-	inference</li>
-	<li>Call from Java or Ruby to interface from other apps in other
-	languages</li>
-</ul>
-</p>
-<hr size="1" />
-<i>Created on 2006-05-19 by Fabian Steeg (steeg SPIDER-MONKEY
-netcologne PERIOD de)</i>
+<p align="right"><font size="2"><i>Created on 2006-05-19
+by <a href="mailto:steeg@netcologne.de"> Fabian Steeg </a> </i></font></p>
 </body>
 </html>
