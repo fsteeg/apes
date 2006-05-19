@@ -29,33 +29,32 @@ Site<br />
 the Subversion <br />
 repository</a> <br />
 <br />
-<a href="http://sourceforge.net/projects/jruby"><img
+<a href="http://sourceforge.net/projects/apes"><img
 	alt="SourceForge.net Logo"
 	src="http://sourceforge.net/sflogo.php?group_id=35413&amp;type=4" /></a></div>
 
 
-<b> Short description </b>
-<p>A Prolog expert system supporting querying and extending the
-knowledge base from a command-line interface using a format oriented on
-natural language, with the aim of being maintainable by the domain
+<!--h3> Short description </h3>  -->
+<b>
+<p>A Prolog expert system (APES) supporting querying and extending
+the knowledge base from a command-line interface using a format oriented
+on natural language, with the aim of being maintainable by the domain
 expert (i.e. without requiring programming skills).</p>
-<hr size="1" />
-<b> Details </b>
-<p>This is a Prolog expert system using an input format oriented on
-natural language. The system can be queried like this: "What is
-Object-01?" or "Is Object-A a bird?". The sytem will search the rules
-and facts in the knowledge base and request missing facts from the user.
-When a solution is found, the inference that lead to the conclusion
-(i.e. the used rules and facts) and additional solutions can be
-displayed.</p>
+</b>
+<!-- h3> Details </h3> -->
+<p>The system can be queried like this: <code>"What is Object-01?"</code> or <code>"Is
+Object-A a bird?"</code>. The sytem will search the rules and facts in the
+knowledge base and request missing facts from the user. When a solution
+is found, the inference that lead to the conclusion (i.e. the used rules
+and facts) and additional solutions can be displayed.</p>
 <p>In a similar manner the knowledge base can be extended from the
-command-line interface: "if animal has backbone and animal has
-cold-blood then animal is a reptile." adds a new rule using facts
-(indicated by "has") that will be searched for and asked from the user.
-The added rules can be used in rules again (using "is a"): "if animal is
+command-line interface: <code>"if animal has backbone and animal has
+cold-blood then animal is a reptile."</code> adds a new rule using facts
+(indicated by <code>"has"</code>) that will be searched for and asked from the user.
+The added rules can be used in rules again (using <code>"is a"</code>): <code>"if animal is
 a reptile and animal has enormous-size and animal has hollywood-fame
-then animal is a godzilla.", now when the system is queryed like "Is
-Object-A a godzilla?" it will first try to satisfy the rule for reptile
+then animal is a godzilla."</code>, now when the system is queryed <code>"is
+Object-A a godzilla?"</code> it will first try to satisfy the rule for reptile
 that was entered before.</p>
 <p>The input format is defined as a Definite Clause Grammar (DCG), a
 grammar description language built into Prolog, and is therefore
@@ -65,8 +64,8 @@ domain-specific language which is not too far from the actual input
 format, making it maintainable by the domain expert without requiring
 Prolog or general programming skills.</p>
 <p>This leads to the core idea and goal: An expert system where the
-knowledge base can not only be queried by the domain expert, but can
-also be built and maintained without requiring programming skills,
+knowledge base can not only be <i>queried</i> by the domain expert, but can
+also be <i>built and maintained</i> without requiring programming skills,
 making this a non-domain-specific expert system that could be used to
 built expert systems for any domain by experts in that particular
 domain, not by programmers.</p>
