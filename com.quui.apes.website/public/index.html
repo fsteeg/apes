@@ -1,15 +1,16 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transistional.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" href="./style.css" type="text/css" />
 <title>A Prolog Expert System (APES)</title>
 </head>
 <body class="top">
-<h1>A Prolog Expert System (APES)</h1>
+<h1 align="center">A Prolog Expert System</h1>
 
 <hr size="1" />
-
 
 <div class="navigation">
 <form action="http://www.google.com/search">
@@ -21,41 +22,39 @@
 	value="i" /> <input type="hidden" name="as_sitesearch"
 	value="apes.sourceforge.net" /></div>
 </form>
-<a href="http://sourceforge.net/projects/apes">Sourceforge Project
-Site<br />
-(Download and More)</a><br />
-<br />
 <a href="https://svn.sourceforge.net/svnroot/apes/com.quui.apes/">Browse
 the Subversion <br />
 repository</a> <br />
+<br />
+<a href="http://sourceforge.net/projects/apes">Sourceforge Project
+Site<br />
+(download and more)</a> <br />
 <br />
 <a href="http://sourceforge.net/projects/apes"><img
 	alt="SourceForge.net Logo"
 	src="http://sourceforge.net/sflogo.php?group_id=35413&amp;type=4" /></a></div>
 
+<p><b>A Prolog expert system (APES) supporting querying and
+extending the knowledge base from a command-line interface using a
+format oriented on natural language, with the aim of being maintainable
+by the domain expert (i.e. without requiring programming skills).</b></p>
 
-<!--h3> Short description </h3>  -->
-<b>
-<p>A Prolog expert system (APES) supporting querying and extending
-the knowledge base from a command-line interface using a format oriented
-on natural language, with the aim of being maintainable by the domain
-expert (i.e. without requiring programming skills).</p>
-</b>
 <!-- h3> Details </h3> -->
-<p>The system can be queried like this: <code>"What is Object-01?"</code> or <code>"Is
-Object-A a bird?"</code>. The sytem will search the rules and facts in the
-knowledge base and request missing facts from the user. When a solution
-is found, the inference that lead to the conclusion (i.e. the used rules
-and facts) and additional solutions can be displayed.</p>
+<p>The system can be queried like this: <code>"What is
+Object-01?"</code> or <code>"Is Object-A a bird?"</code>. The sytem will search
+the rules and facts in the knowledge base and request missing facts from
+the user. When a solution is found, the inference that lead to the
+conclusion (i.e. the used rules and facts) and additional solutions can
+be displayed.</p>
 <p>In a similar manner the knowledge base can be extended from the
-command-line interface: <code>"if animal has backbone and animal has
-cold-blood then animal is a reptile."</code> adds a new rule using facts
-(indicated by <code>"has"</code>) that will be searched for and asked from the user.
-The added rules can be used in rules again (using <code>"is a"</code>): <code>"if animal is
-a reptile and animal has enormous-size and animal has hollywood-fame
-then animal is a godzilla."</code>, now when the system is queryed <code>"is
-Object-A a godzilla?"</code> it will first try to satisfy the rule for reptile
-that was entered before.</p>
+command-line interface: <code>"if animal has backbone and animal
+has cold-blood then animal is a reptile."</code> adds a new rule using facts
+(indicated by <code>"has"</code>) that will be searched for and asked
+from the user. The added rules can be used in rules again (using <code>"is
+a"</code>): <code>"if animal is a reptile and animal has enormous-size
+and animal has hollywood-fame then animal is a godzilla."</code>, now when the
+system is queryed <code>"is Object-A a godzilla?"</code> it will first
+try to satisfy the rule for reptile that was entered before.</p>
 <p>The input format is defined as a Definite Clause Grammar (DCG), a
 grammar description language built into Prolog, and is therefore
 well-defined and extensible. The knowledge is represented in text files
@@ -64,14 +63,19 @@ domain-specific language which is not too far from the actual input
 format, making it maintainable by the domain expert without requiring
 Prolog or general programming skills.</p>
 <p>This leads to the core idea and goal: An expert system where the
-knowledge base can not only be <i>queried</i> by the domain expert, but can
-also be <i>built and maintained</i> without requiring programming skills,
-making this a non-domain-specific expert system that could be used to
-built expert systems for any domain by experts in that particular
-domain, not by programmers.</p>
+knowledge base can not only be <i>queried</i> by the domain expert, but
+can also be <i>built and maintained</i> without requiring programming
+skills, making this a non-domain-specific expert system that could be
+used to built expert systems for any domain by experts in that
+particular domain, not by programmers.</p>
 
 <hr size="1" />
-<p align="right"><font size="2"><i>Created on 2006-05-19
-by <a href="mailto:steeg@netcologne.de"> Fabian Steeg </a> </i></font></p>
+<p align="center"><a
+	href="http://validator.w3.org/check?uri=referer"><img
+	src="http://www.w3.org/Icons/valid-xhtml10"
+	alt="Valid XHTML 1.0 Transitional" height="31" width="88" /></a> <br />
+<br />
+<font size="2"><i>This site was created on 2006-05-19 by <a
+	href="mailto:steeg@netcologne.de"> Fabian Steeg </a> </i></font></p>
 </body>
 </html>
