@@ -1,4 +1,7 @@
-A Prolog Expert System (APES). 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ A Prolog Expert System (APES)
+ http://apes.sourceforge.net/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 Allows querying and extending the knowledge base from a command-line interface. For that it uses a format aiming at natural language, which is defined as a Definite Clause Grammar (DCG). The knowledge is stored in text files using a format which is maintainable by the domain expert.
 
