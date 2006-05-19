@@ -1,0 +1,53 @@
+A Prolog Expert System (APES). 
+
+Allows querying and extending the knowledge base from a command-line interface. For that it uses a format aiming at natural language, which is defined as a Definite Clause Grammar (DCG). The knowledge is stored in text files using a format which is maintainable by the domain expert.
+
+Running:
+
+0. install swi-prolog (should work on any ISO-Standard Prolog Interpreter, but this is untested)
+1. run "swipl -f main.pl"
+2. enter "start."
+
+On questions, answer "yes."/"no."/"why." or "y."/"n."/"w."
+
+Queries:
+
+3. Consult the expert: "what is Object-A?" 
+4. Consult the expert using a specified property: "is Object-A a bird?"
+5. Query a fact, knowing the group: "is a dog a pet?"
+6. Query a group: "show group pet."
+
+Build up the Knowledge:
+
+7. Add a rule: 
+- using facts to be asked or given (with "has"):
+ 	"if animal has scales and animal has cold-blood then animal is a reptile."
+- using existing rules (with "is a"):
+	"if animal is a reptile and animal has enormous-size 
+	and animal has hollywood-fame then animal is a godzilla."
+8. Add a fact: "hamster is a pet." or "add hamster to pet."
+9. Create a new group: "create group feline."
+
+Rules are stored in "knowledge/knowledge.pl", facts in individual files for each group in "knowledge/groups".
+
+Todo:
+
+- Make input more flexible
+- Improve cli feeling, reaction
+- Add online help to cli (display this file)
+- Info on startup, on the help available
+- Number rules added from the cli, for info on display of inference
+
+Sourceforge short
+
+A Prolog expert system supporting querying and extending the knowledge base from a command-line interface using a format oriented on natural language, with the aim of being maintainable by the domain expert (i.e. without requiring programming skills).
+
+Sourceforge long
+
+This is a Prolog expert system using an input format oriented on natural language. The system can be queried like this: "What is Object-01?" or "Is Object-A a bird?". The sytem will search the rules and facts in the knowledge base and request missing facts from the user. When a solution is found, the inference that lead to the conclusion (i.e. the used rules and facts) and additional solutions can be displayed.
+
+In a similar manner the knowledge base can be extended from the command-line interface: "if animal has scales and animal has cold-blood then animal is a reptile." adds a new rule using facts (indicated by "has") that will be searched for and asked from the user. The added rules can be used in rules again (using "is a"): "if animal is a reptile and animal has enormous-size and animal has hollywood-fame then animal is a godzilla.", now when the system is queryed like "Is Object-A a godzilla?" it will first try to satisfy the rule for reptile that was entered before.
+
+The input format is defined as a Definite Clause Grammar (DCG), a grammar description language built into Prolog, and is therefore well-defined and extensible. The knowledge is represented in text files containing Prolog predicates with defined operators to make it a domain-specific language which is not too far from the actual input format, making it maintainable by the domain expert without requiring Prolog or general programming skills.
+
+This leads to the core idea and goal: An expert system where the knowledge base can not only be queried by the domain expert, but can also be built and maintained without requiring programming skills, making this a non-domain-specific expert system that could be used to built expert systems for any domain by experts in that particular domain, not by programmers.
