@@ -1,3 +1,8 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A Prolog Expert System (APES)
+% http://apes.sourceforge.net/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % From Bratko, Prolog Progr. for AI, 2000
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -230,7 +235,7 @@ askvars([Variable/Name | Variables]):-
     read(Variable),
     askvars(Variables).
 
-% fertig:
+% done:
 showtrace([]):-
     nl, write('This was your question'),nl.
     
@@ -301,7 +306,7 @@ showconclusion(Conclusion was _Found):-
 % 'show' displays a complete solution tree
 
 show(Solution):-
-    % ondent by 0
+    % indent by 0
     nl, show(Solution,0),
     !.
 show(Answer1 and Answer2,H):-

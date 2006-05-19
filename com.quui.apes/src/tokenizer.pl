@@ -1,7 +1,13 @@
 /*
-%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A Prolog Expert System (APES)
+% http://apes.sourceforge.net/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%% 
 %read user input 
 %from clocksin & mellish
+%"Programming in Prolog"
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 like this:

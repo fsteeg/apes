@@ -1,16 +1,19 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% An Expert System in Prolog 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A Prolog Expert System (APES)
+% http://apes.sourceforge.net/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% --------------------------------------------
-% helpers zur eingabe von if-then-regeln
-% 
-% eine regel hat nur ein objekt, es wird 
-% immer durchgereicht (das 2. Argument von
-% processStatement)
-% -------------------------------------------- 
+% ------------------------------------------------------
+% helpers for entering if-then-rules
 
-% mehrere statements, zerlegen
+% TODO these predicates shoudl be moved to 
+% a more descriptive file...
+
+% each rule has only one object, which is handed through
+% (the second argument of processStatement)
+% ------------------------------------------------------
+
+% multiple statements, break down...
 processStatement(Conditions,N):-
     link(_,[Link],[]),
     Conditions = condition(S,Link,Rest),
@@ -20,14 +23,14 @@ processStatement(Conditions,N):-
     write(Link), write(' '), nl,tab(5),
     processStatement(Rest,N).    
     
-% eine condition aus einem satz
+% one condition consisting of one sentence
 processStatement(Condition,N):-
     Condition = condition(S),
     assignN(S,N),
     append('knowledge/knowledge.pl'),
     writeStatement(S,N).
 
-% einem satz
+% one sentence
 processStatement(S,N):-
     append('knowledge/knowledge.pl'),
     writeStatement(S,N).
@@ -40,7 +43,7 @@ assignN(From,Old):-
     From = s(Old,_,_).
 assignN(_,_).
 
-% ein statement a la 'X isa good flier'
+% a statement a la 'X isa good flier'
 writeStatement(S,N):-
     S = s(_,V,AP),
     ensureList(AP,Neu),
@@ -52,10 +55,10 @@ writeStatement(S,N):-
     write(' '),!.
 
 % ------------------------------------
-% helpers zur eingabe von fakten
+% helpers for entering facts
 % ------------------------------------
 
-% zur ausgabe der bestehenden regeln
+% print existing rules
 readAllClauses(X):-
     at_end_of_stream(X),
     close(X),nl.
@@ -64,7 +67,7 @@ readAllClauses(X):-
     write(Result),nl,
     readAllClauses(X).
 
-% pro neue gruppe eine datei anlegen
+% create a file for each new group
 createFileWithDynDecl(Name):-
     % create new file for group, incl dynamic declaration:
     atom_concat('knowledge/groups/',Name,X),
@@ -91,10 +94,10 @@ addItem(Item,Group):-
     write(' to group: '), write(Group), nl.  
 
 % ------------------------------------
-% helpers zum fragen
+% helpers for queries
 % ------------------------------------
 
-% zum fragen is the moon a planet ---- > moon isa planet
+% to query "is the moon a planet?"---- > moon isa planet
 removeDet(X,Result):-
     X=[Result]. 
 removeDet(X,Result):-
@@ -125,7 +128,7 @@ listToAtom([H|T],_,Result):-
     H = Atom,
     listToAtom(T,Atom,Result).
 
-% bevor es an writeList uebergeben wird
+% before calling writeList
 ensureList(X,Neu):-
     is_list(X),
     Neu = X.
@@ -133,7 +136,7 @@ ensureList(X,Neu):-
     \+ is_list(X),
     Neu = [X].
     
-% schreibt zwischen alle elemente ein leerzeichen ausser nach dem letzten 
+% add blanks between a elements but the last
 writeList([]).
 writeList([H|T]):-
     write(H), 

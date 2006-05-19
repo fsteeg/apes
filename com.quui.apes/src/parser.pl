@@ -1,6 +1,9 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% An Expert System in Prolog 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A Prolog Expert System (APES)
+% http://apes.sourceforge.net/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% This is a DCG for describing the input format
 
 % --------------------------------------------
 % question

@@ -1,6 +1,7 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% An Expert System in Prolog 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A Prolog Expert System (APES)
+% http://apes.sourceforge.net/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % this isnt working
 process([stop,'.']):-
@@ -11,7 +12,7 @@ process([help,'.']):-
     readAllClauses(X).
 
 % --------------------------------------------
-% eingabe von if-then-regeln
+% entering if-then-rules
 % --------------------------------------------      
 
 process(Rule):-
@@ -30,7 +31,7 @@ process(Rule):-
     write('ok, added rule: '),writeList(Rule),nl.
 
 % --------------------------------------------
-% fragen
+% queries
 % -------------------------------------------- 
 
 process(Q) :-
@@ -43,7 +44,7 @@ process(Q) :-
     ensureAtom(S0,S),
     %write('name: '), write(Object), nl,
     (   
-        % ab in bratko
+        % into bratko
         answeryes(O isa S)
         ;
         answerno(O isa S)
@@ -52,14 +53,14 @@ process(Q) :-
 process([what,is,Object,'?']) :-
     %write('name: '), write(Object), nl,
     (   
-        % ab in bratko
+        % into bratko
         answeryes(Object isa X)
         ;
         answerno(Object isa X)
     ).  
 
 % --------------------------------------------
-% eingabe von fakten
+% entering facts
 % -------------------------------------------- 
 
 process([create,group,Name,'.']) :-

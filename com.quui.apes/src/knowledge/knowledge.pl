@@ -1,5 +1,10 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A Prolog Expert System (APES)
+% http://apes.sourceforge.net/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% rules for use with engine from 
+% Rules for use with engine from 
 % Bratko, Prolog Progr. for AI, 2000
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

@@ -1,6 +1,7 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% An Expert System in Prolog 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A Prolog Expert System (APES)
+% http://apes.sourceforge.net/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 :- ensure_loaded('engine.pl').
 :- ensure_loaded('tokenizer.pl').
@@ -17,13 +18,12 @@ start:-
 	loop_read_in(_).
 
 loop_read_in(X):-
-    % aus tokenizer.pl (clocksin & mellish):
+    % from tokenizer.pl (clocksin & mellish, "programming in prolog"):
 	read_in(X),
 	process(X),
 	loop_read_in(_).
 
 loop_read_in(X):-
-    % aus clocksin mellish
 	read_in(X),	
 	not(process(X)),
 	!,fail.
