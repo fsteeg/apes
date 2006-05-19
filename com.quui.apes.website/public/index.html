@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="./style.css" type="text/css" />
+<title>A Prolog Expert System (APES)</title>
+</head>
+<body class="top">
+<h3>A Prolog Expert System (APES)</h3>
+
+<hr size="1" />
+
+
+<div class="navigation">
+<form action="http://www.google.com/search">
+<div>Search <input size="15" name="as_q" /> <input type="hidden"
+	name="hl" value="en" /> <input type="hidden" name="ie" value="UTF-8" />
+<input type="hidden" name="btnG" value="Google+Search" /> <input
+	type="hidden" name="as_qdr" value="all" /> <input type="hidden"
+	name="as_occt" value="any" /> <input type="hidden" name="as_dt"
+	value="i" /> <input type="hidden" name="as_sitesearch"
+	value="apes.sourceforge.net" /></div>
+</form>
+<a href="http://sourceforge.net/projects/apes">Download & More</a><br />
+<a href="https://svn.sourceforge.net/svnroot/apes/com.quui.apes/">Browse Subversion</a>
+<br />
+<br />
+<a href="http://sourceforge.net/projects/jruby"><img
+	alt="SourceForge.net Logo"
+	src="http://sourceforge.net/sflogo.php?group_id=35413&amp;type=4" /></a></div>
+
+
+<b> Short description </b>
+<p>A Prolog expert system supporting querying and extending the
+knowledge base from a command-line interface using a format oriented on
+natural language, with the aim of being maintainable by the domain
+expert (i.e. without requiring programming skills).</p>
+<hr size="1" />
+<b> Details </b>
+<p>This is a Prolog expert system using an input format oriented on
+natural language. The system can be queried like this: "What is
+Object-01?" or "Is Object-A a bird?". The sytem will search the rules
+and facts in the knowledge base and request missing facts from the user.
+When a solution is found, the inference that lead to the conclusion
+(i.e. the used rules and facts) and additional solutions can be
+displayed.</p>
+<p>In a similar manner the knowledge base can be extended from the
+command-line interface: "if animal has backbone and animal has
+cold-blood then animal is a reptile." adds a new rule using facts
+(indicated by "has") that will be searched for and asked from the user.
+The added rules can be used in rules again (using "is a"): "if animal is
+a reptile and animal has enormous-size and animal has hollywood-fame
+then animal is a godzilla.", now when the system is queryed like "Is
+Object-A a godzilla?" it will first try to satisfy the rule for reptile
+that was entered before.</p>
+<p>The input format is defined as a Definite Clause Grammar (DCG), a
+grammar description language built into Prolog, and is therefore
+well-defined and extensible. The knowledge is represented in text files
+containing Prolog predicates with defined operators to make it a
+domain-specific language which is not too far from the actual input
+format, making it maintainable by the domain expert without requiring
+Prolog or general programming skills.</p>
+<p>This leads to the core idea and goal: An expert system where the
+knowledge base can not only be queried by the domain expert, but can
+also be built and maintained without requiring programming skills,
+making this a non-domain-specific expert system that could be used to
+built expert systems for any domain by experts in that particular
+domain, not by programmers.</p>
+<hr size="1" />
+<b>Usage</b>
+<hr size="1" />
+<p><b>Running</b>
+<ul>
+	<li>install swi-prolog (should work on any ISO-Standard Prolog
+	Interpreter, but this is untested)</li>
+	<li>run "swipl -f main.pl"</li>
+	<li>enter "start."</li>
+</ul>
+</p>
+<hr size="1" />
+<p>On questions, answer "yes."/"no."/"why." or "y."/"n."/"w."</p>
+<hr size="1" />
+<p><b>Queries</b>
+<ul>
+	<li>Consult the expert: "what is Object-A?"</li>
+	<li>Consult the expert using a specified property: "is Object-A a
+	bird?"</li>
+	<li>Query a fact, knowing the group: "is a dog a pet?"</li>
+	<li>Query a group: "show group pet."</li>
+</ul>
+</p>
+<hr size="1" />
+<p><b>Build up the Knowledge</b>
+<ul>
+	<li>Add a rule using facts to be asked or given (with "has"): "if
+	animal has scales and animal has cold-blood then animal is a reptile."
+	</li>
+	<li>Add a rule using existing rules (with "is a"): "if animal is a
+	reptile and animal has enormous-size and animal has hollywood-fame then
+	animal is a godzilla."</li>
+	<li>Add a fact: "hamster is a pet." or "add hamster to pet."</li>
+	<li>Create a new group: "create group feline."</li>
+</ul>
+</p>
+<p>Rules are stored in "knowledge/knowledge.pl", facts in individual
+files for each group in "knowledge/groups".</p>
+<hr size="1" />
+<p><b>Plans & Todos</b>
+<ul>
+	<li>Make input more flexible</li>
+	<li>Improve cli feeling, reaction</li>
+	<li>Add online help to cli (display this file)</li>
+	<li>Info on startup, on the help available</li>
+	<li>Number rules added from the cli, for info on display of
+	inference</li>
+	<li>Call from Java or Ruby to interface from other apps in other
+	languages</li>
+</ul>
+</p>
+<hr size="1" />
+<i>Created on 2006-05-19 by Fabian Steeg (steeg SPIDER-MONKEY
+netcologne PERIOD de)</i>
+</body>
+</html>

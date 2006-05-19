@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+.top { 
+  background-color: #F0F0F0;
+}
+
+
+.navigation {
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+  padding: 1em;
+  float: right;
+  background-color: #C8C8C8;
+  border: 2px outset;
+}
