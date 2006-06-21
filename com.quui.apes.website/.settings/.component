@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId">
+<wb-module deploy-name="com.quui.apes.website">
+<wb-resource deploy-path="/" source-path="/public"/>
+<property name="context-root" value="com.quui.apes.website"/>
+</wb-module>
+</project-modules>
